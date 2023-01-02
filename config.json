@@ -1,0 +1,11 @@
+{
+    "messages": {
+        "intro": "Halo!!\n\n*SIBOT* dirancang untuk memudahkan kalian dalam belajar\n\nApakah ada yang bisa Chatbot bantu?",
+        "guide1": "Saat ini kalian terhubung dengan penyampaian informasi berupa petunjuk penggunaan *SIBOT*",
+        "guide2": "Kirimlah pesan kode ketik berupa angka untuk melakukan pilihan tampilan materi"
+    },
+    "menu": {
+        "guide": "Petunjuk",
+        "menu": "Menu"
+    }
+}
