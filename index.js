@@ -10,7 +10,8 @@ const client = Pepesan.init(router, {
     sessionPath: './session',
     db: {
         dialect: 'sqlite',
-        path: 'data.sqlite'
+        path: 'data.sqlite',
+        timezone: '+00:00'
     },
     models: []
 });

@@ -23,6 +23,15 @@
   "homepage": "https://github.com/mqad21/sibot#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "pepesan": "github:mqad21/pepesan"
+    "pepesan": "github:mqad21/pepesan",
+    "string-template": "^1.0.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/**/node_modules",
+      "./session/*",
+      "data.sqlite",
+      "data-journal.sqlite"
+    ]
   }
 }
