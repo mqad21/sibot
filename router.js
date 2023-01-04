@@ -8,5 +8,6 @@ router.keyword('hai', [IntroController, 'index']);
 router.button('petunjuk', [GuideController, 'index']);
 router.button('menu', [MenuController, 'index']);
 router.keyword(config.menu.kikd, [MenuController, 'sendKikd'])
+router.keyword(config.menu.subject, [MenuController, 'sendSubject'])
 
 module.exports = router;

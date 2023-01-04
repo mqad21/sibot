@@ -4,7 +4,8 @@
         "guide1": "Saat ini kalian terhubung dengan penyampaian informasi berupa petunjuk penggunaan *{botName}*",
         "guide2": "Kirimlah pesan kode ketik berupa angka untuk melakukan pilihan tampilan materi",
         "menu": "Sobat *{botName}*, ini merupakan materi {subject}, silahkan lanjutkan dengan memilih kode ketik sesuai keinginan kalian",
-        "kikd": "Sobat *{botName}*, ini merupakan tampilan dari Kompetensi Inti dan Kompetensi Dasar dari materi {subject}"
+        "kikd": "Sobat *{botName}*, ini merupakan tampilan dari Kompetensi Inti dan Kompetensi Dasar dari materi {subject}",
+        "subject": "Sobat *{botName}*, ini merupakan tampilan dari materi pembelajaran {subject}"
     },
     "menu": {
         "guide": "Petunjuk",
