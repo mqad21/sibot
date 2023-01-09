@@ -1,7 +1,9 @@
+global.__basedir = __dirname
 require('dotenv').config({ path: './.env' });
 
 const Pepesan = require('pepesan');
 const router = require('./router');
+const Sheet = require('./utils/Sheet');
 const { ALLOWED_NUMBERS } = process.env
 
 const client = Pepesan.init(router, {
@@ -17,5 +19,6 @@ const client = Pepesan.init(router, {
 });
 
 (async () => {
+    Sheet.init()
     await client.connect();
 })();

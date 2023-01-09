@@ -1,5 +1,7 @@
 {
     "messages": {
+        "seeMenu": "Lihat menu",
+        "seeContent": "Lihat isi materi",
         "intro": "Halo!!\n\n*{botName}* dirancang untuk memudahkan kalian dalam belajar\n\nApakah ada yang bisa Chatbot bantu?",
         "guide1": "Saat ini kalian terhubung dengan penyampaian informasi berupa petunjuk penggunaan *{botName}*",
         "guide2": "Kirimlah pesan kode ketik berupa angka untuk melakukan pilihan tampilan materi",
