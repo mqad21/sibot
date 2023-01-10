@@ -1,21 +1,25 @@
 {
     "messages": {
-        "seeMenu": "Lihat menu",
+        "seeMenu": "Klik tombol di bawah untuk melihat menu",
         "seeContent": "Lihat isi materi",
+        "seeSubContent": "Lihat isi submateri",
         "intro": "Halo!!\n\n*{botName}* dirancang untuk memudahkan kalian dalam belajar\n\nApakah ada yang bisa Chatbot bantu?",
         "guide1": "Saat ini kalian terhubung dengan penyampaian informasi berupa petunjuk penggunaan *{botName}*",
         "guide2": "Kirimlah pesan kode ketik berupa angka untuk melakukan pilihan tampilan materi",
         "menu": "Sobat *{botName}*, ini merupakan materi {subject}, silahkan lanjutkan dengan memilih kode ketik sesuai keinginan kalian",
-        "kikd": "Sobat *{botName}*, ini merupakan tampilan dari Kompetensi Inti dan Kompetensi Dasar dari materi {subject}",
-        "subject": "Sobat *{botName}*, ini merupakan tampilan dari materi pembelajaran {subject}"
+        "kikd": "Sobat *{botName}*, ini merupakan tampilan dari Kompetensi Inti dan Kompetensi Dasar dari materi {subject}\n\n*Kompetensi Inti*\n{ki}\n\n*Kompetensi Dasar*\n{kd}",
+        "subject": "Sobat *{botName}*, ini merupakan tampilan dari materi pembelajaran {subject}",
+        "subsubject": "Sobat *{botName}*, ini merupakan tampilan dari submateri {title}",
+        "quiz": "Sobat *{botName}*, silahkan mengerjakan soal yang tersedia dibawah ini\n\n{quiz}"
     },
     "menu": {
         "guide": "Petunjuk",
         "menu": "Menu",
         "kikd": "KI dan KD",
         "subject": "Materi",
-        "question": "Soal",
-        "about": "Tentang"
+        "quiz": "Soal",
+        "about": "Tentang",
+        "help": "Bantuan"
     },
     "variables": {
         "botName": "SIBOT"

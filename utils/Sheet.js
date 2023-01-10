@@ -40,7 +40,7 @@ module.exports = class Sheet {
 
             if (content) {
                 const lastContentIndex = heading[lastHeadingIndex].content.length - 1
-                heading[lastHeadingIndex].content[lastContentIndex].content += `\n${content}`
+                heading[lastHeadingIndex].content[lastContentIndex].content += `\n\n${content}`
             }
         })
         output.heading = heading
@@ -65,8 +65,12 @@ module.exports = class Sheet {
         return this.getContents().map((content, index) => ({ text: content.title, value: `heading_${index}` }))
     }
 
-    static getContent(index) {
-        return this.getContents()[index]
+    static getSubHeadings(headingIndex) {
+        return this.getContents()[headingIndex].content.map((content, index) => ({ text: content.subtitle, value: `heading_${headingIndex}_subheading_${index}` }))
+    }
+
+    static getContent(headingIndex, subHeadingIndex) {
+        return this.getContents()[headingIndex].content[subHeadingIndex]
     }
 
 }
