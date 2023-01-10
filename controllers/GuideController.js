@@ -5,8 +5,8 @@ const { format } = require('../utils/helpers');
 module.exports = class GuideController extends Controller {
 
     async index() {
-        const { guide1, guide2 } = config.messages;
-        return [format(guide1), guide2];
+        const { guide } = config.messages;
+        return guide
     }
 
 }

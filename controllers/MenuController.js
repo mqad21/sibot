@@ -2,11 +2,15 @@ const { Controller, Response } = require("pepesan");
 const config = require("../config.json");
 const { format } = require("../utils/helpers");
 const Sheet = require("../utils/Sheet");
+const fs = require("fs")
 
 module.exports = class MenuController extends Controller {
 
     subject = Sheet.getMetadata("Judul Materi")
     ki = Sheet.getMetadata("Kompetensi Inti")
+    kd = Sheet.getMetadata("Kompetensi Dasar")
+    indicator = Sheet.getMetadata("Indikator")
+    goals = Sheet.getMetadata("Tujuan Pembelajaran")
     kd = Sheet.getMetadata("Kompetensi Dasar")
     quiz = Sheet.getMetadata("Soal")
 
@@ -32,7 +36,7 @@ module.exports = class MenuController extends Controller {
 
     async sendKikd() {
         const { kikd: kikdMessage } = config.messages
-        const message = format(kikdMessage, { subject: this.subject, ki: this.ki, kd: this.kd })
+        const message = format(kikdMessage, { subject: this.subject, ki: this.ki, kd: this.kd, goals: this.goals, indicator: this.indicator })
         return this.getMenuButton(message)
     }
 
@@ -53,23 +57,35 @@ module.exports = class MenuController extends Controller {
         return this.getMenuAndHelpButton()
     }
 
-    async sendContent(request, headingIndex, subHeadingIndex) {
-        const content = Sheet.getContent(headingIndex, subHeadingIndex)
-        const message = `*${content.subtitle.toUpperCase()}*\n\n${content.content}`
-        const menuMessage = this.getMenuMessage()
+    async sendContent(request, index) {
+        const content = Sheet.getContent(index)
+        const message = content.content.map(it => `*${it.subtitle}*\n${it.content}`)
         await this.reply(message)
-        return Response.button.fromArrayOfString(["Menu"])
+        return this.getMenuAndHelpButton()
     }
 
     async sendQuiz() {
         const { quiz: quizMessage } = config.messages
-        const menuMessage = this.getMenuMessage()
         await this.reply(format(quizMessage, { subject: this.subject, quiz: this.quiz }))
-        return menuMessage
+        return this.getMenuButton()
     }
 
     async sendAbout() {
+        const { about: aboutMessage } = config.messages
+        await this.reply([
+            format(aboutMessage, { subject: this.subject }),
+            Response.image.fromBuffer(fs.readFileSync(__basedir + "/assets/profile.jpg")),
+        ])
+        return this.getMenuButton()
+    }
 
+    async sendAboutChatbot() {
+        const { aboutChatbot: aboutMessage } = config.messages
+        return format(aboutMessage, { subject: this.subject })
+    }
+
+    async sendHelp() {
+        return format(config.messages.help)
     }
 
 }

@@ -69,8 +69,8 @@ module.exports = class Sheet {
         return this.getContents()[headingIndex].content.map((content, index) => ({ text: content.subtitle, value: `heading_${headingIndex}_subheading_${index}` }))
     }
 
-    static getContent(headingIndex, subHeadingIndex) {
-        return this.getContents()[headingIndex].content[subHeadingIndex]
+    static getContent(index) {
+        return this.getContents()[index]
     }
 
 }

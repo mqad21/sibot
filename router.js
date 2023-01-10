@@ -4,14 +4,15 @@ const config = require('./config.json');
 
 const router = new Router();
 
-router.keyword('hai', [IntroController, 'index']);
-router.button('petunjuk', [GuideController, 'index']);
-router.button('menu', [MenuController, 'index']);
+router.keyword(config.messages.hi, [IntroController, 'index']);
+router.button(config.menu.guide, [GuideController, 'index']);
+router.keyword(config.menu.aboutChatbot, [MenuController, 'sendAboutChatbot'])
+router.button(config.menu.menu, [MenuController, 'index']);
 router.keyword(config.menu.kikd, [MenuController, 'sendKikd'])
 router.keyword(config.menu.subject, [MenuController, 'sendSubject'])
 router.keyword(config.menu.quiz, [MenuController, 'sendQuiz'])
 router.keyword(config.menu.about, [MenuController, 'sendAbout'])
-router.list("heading_{headingIndex}_subheading_{subHeadingIndex}", [MenuController, 'sendContent'])
-router.list("heading_{index}", [MenuController, 'sendSubSubject'])
+router.keyword(config.menu.help, [MenuController, 'sendHelp'])
+router.list("heading_{index}", [MenuController, 'sendContent'])
 
 module.exports = router;
