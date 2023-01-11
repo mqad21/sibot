@@ -8,7 +8,7 @@ const { ALLOWED_NUMBERS } = process.env
 
 const client = Pepesan.init(router, {
     browserName: 'SIBOT',
-    allowedNumbers: ALLOWED_NUMBERS.split(','),
+    allowedNumbers: ALLOWED_NUMBERS ? ALLOWED_NUMBERS.split(',') : undefined,
     sessionPath: './session',
     db: {
         dialect: 'sqlite',
