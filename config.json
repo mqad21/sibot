@@ -1,29 +1,31 @@
 {
     "messages": {
         "seeMenu": "Klik tombol di bawah untuk melihat menu",
-        "seeContent": "Lihat isi materi",
-        "seeSubContent": "Lihat isi submateri",
-        "intro": "Halo!!\n\n*{botName}* dirancang untuk memudahkan kalian dalam belajar\n\nApakah ada yang bisa Chatbot bantu?",
-        "guide": "1. Silahkan klik tombol atau menu pada Chatbot untuk memilih pembelajaran yang diinginkan\n2. Silahkan klik tombol BANTUAN apabila ada yang ingin ditanyakan",
-        "menu": "Sobat *{botName}*, ini merupakan materi {subject}, silahkan lanjutkan dengan memilih tombol menu di bawah ini",
+        "seeContent": "LIHAT MATERI",
+        "seeSubContent": "LIHAT SUBMATERI",
+        "intro": "Halo!!\nPerkenalkan saya adalah *{botName}*\nApakah ada yang bisa *{botName}* bantu?",
+        "guide": "Petunjuk penggunaan *{botName}*\n1. Silahkan klik tombol atau MENU pada Chatbot untuk memilih pembelajaran yang diinginkan\n2. Silahkan klik tombol BANTUAN apabila ada yang ingin ditanyakan",
+        "menu": "Anda memasuki MENU PEMBELAJARAN, silahkan pilih daftar pembelajaran yang tersedia dibawah ini:",
         "kikd": "Sobat *{botName}*, ini merupakan tampilan dari Kompetensi Inti dan Kompetensi Dasar dari materi {subject}\n\n*Kompetensi Inti*\n{ki}\n\n*Kompetensi Dasar*\n{kd}\n\n*Indikator*\n{indicator}\n\n*Tujuan Pembelajaran*\n{goals}",
         "subject": "Sobat *{botName}*, ini merupakan tampilan dari materi pembelajaran {subject}",
         "subsubject": "Sobat *{botName}*, ini merupakan tampilan dari submateri {title}",
-        "quiz": "Berikut merupakan soal evaluasi setelah menggunakan Chatbot berbasis Whatsapp sebagai media pembelajaran pada materi {subject}\n\n{quiz}",
+        "quiz": "Berikut merupakan soal evaluasi setelah menggunakan Chatbot berbasis WhatsApp sebagai media pembelajaran pada materi {subject}\n\n{quiz}",
         "hi": "hai",
-        "about": "*{botName}* dikembangkan oleh Hafidzul Maiza Kusuma. Mahasiswa Program Studi Teknologi Pendidikan Universitas Negeri Malang yang dibimbing oleh Bapak Drs. H. Zainul Abidin , M.Pd dan Dr. Made Duananda Kartika Degeng , S.Pd., M.Pd",
-        "aboutChatbot": "Chatbot ini adalah pesan otomatis yang dijadikan sebagai media pembelajaran pada materi {subject} yang dirancang melalui kecerdasan buatan / Artificial Intelligence (AI)",
-        "help": "Apabila ada materi yang kurang di pahami, silahkan bertanya secara langsung kepada *{botName}*"
+        "about": "*{botName}* dikembangkan oleh Hafidzul Maiza Kusuma. Mahasiswa Program Studi Teknologi Pendidikan Universitas Negeri Malang yang dibimbing oleh Bapak Dr. Made Duananda Kartika Degeng , S.Pd., M.Pd dan Drs. H. Zainul Abidin , M.Pd",
+        "aboutChatbot": "*{botName}* merupakan sebuah nama dari Chatbot yang di desain menjadi pesan otomatis untuk dijadikan sebagai media pembelajaran pada materi {subject} yang dirancang melalui kecerdasan buatan manusia / Artificial Intelligence (AI)",
+        "help": "Apabila ada kendala atau kurang paham dalam penggunaan *{botName}* maupun kurang memahami materi, silahkan bertanya secara langsung kepada *{botName}* dengan cara:\n\n1. Mengirim pesan secara langsung ke *{botName}*, dengan cara ketik secara manual\n2. Lakukan panggilan telpon WhatsApp kepada *{botName}*"
     },
     "menu": {
         "guide": "Petunjuk",
-        "menu": "Menu",
-        "kikd": "KI, KD, Indikator dan Tujuan Pembelajaran",
-        "subject": "Materi",
-        "quiz": "Soal Evaluasi",
-        "about": "Tentang",
-        "aboutChatbot": "Tentang Chat Bot",
-        "help": "Bantuan"
+        "menu": "MENU PEMBELAJARAN",
+        "backToMenu": "KEMBALI KE MENU PEMBALAJARAN",
+        "kikd": "KI, KD, INDIKATOR, DAN TUJUAN PEMBELAJARAN",
+        "subject": "MATERI",
+        "backToSubject": "KEMBALI KE MENU MATERI",
+        "quiz": "SOAL EVALUASI",
+        "about": "TENTANG",
+        "aboutChatbot": "TENTANG SIBOT",
+        "help": "BANTUAN"
     },
     "variables": {
         "botName": "SIBOT"

@@ -26,11 +26,11 @@ module.exports = class MenuController extends Controller {
     }
 
     async getMenuButton(message = " ") {
-        return Response.button.fromArrayOfString([config.menu.menu], message)
+        return Response.button.fromArrayOfString([config.menu.backToMenu], message)
     }
 
     async getMenuAndHelpButton(message = " ") {
-        return Response.button.fromArrayOfString([config.menu.menu, config.menu.help], message)
+        return Response.button.fromArrayOfString([config.menu.backToSubject, config.menu.help], message)
     }
 
 
@@ -59,7 +59,7 @@ module.exports = class MenuController extends Controller {
 
     async sendContent(request, index) {
         const content = Sheet.getContent(index)
-        const message = content.content.map(it => `*${it.subtitle}*\n${it.content}`)
+        const message = content.content.map(it => `*${it.subtitle}*\n\n${it.content}`)
         await this.reply(message)
         return this.getMenuAndHelpButton()
     }

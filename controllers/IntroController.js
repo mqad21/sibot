@@ -5,9 +5,9 @@ const { format } = require('../utils/helpers');
 module.exports = class IntroController extends Controller {
 
     async index() {
-        const { menu, guide, aboutChatbot } = config.menu;
+        const { menu, help, aboutChatbot } = config.menu;
         const { intro } = config.messages;
-        return Response.button.fromArrayOfString([aboutChatbot, guide, menu], format(intro))
+        return Response.button.fromArrayOfString([aboutChatbot, help, menu], format(intro))
     }
 
 }
