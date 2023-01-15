@@ -1,4 +1,4 @@
-const { Controller, Response } = require("pepesan");
+const { Controller, Response, getObjectType } = require("pepesan");
 const config = require("../config.json");
 const { format } = require("../utils/helpers");
 const Sheet = require("../utils/Sheet");
@@ -16,7 +16,12 @@ module.exports = class MenuController extends Controller {
 
     async index() {
         const { menu: menuMessage } = config.messages
-        return this.getMenuMessage(format(menuMessage, { subject: this.subject }))
+        const { backToIntro } = config.menu
+        const menuMessageList = await this.getMenuMessage(format(menuMessage, { subject: this.subject }))
+        return [
+            menuMessageList,
+            Response.button.fromArrayOfString([backToIntro])
+        ]
     }
 
     async getMenuMessage(text = " ") {
@@ -33,6 +38,10 @@ module.exports = class MenuController extends Controller {
         return Response.button.fromArrayOfString([config.menu.backToSubject, config.menu.help], message)
     }
 
+    async getIntroButton(message = " ") {
+        const { menu, help, aboutChatbot } = config.menu;
+        return Response.button.fromArrayOfString([aboutChatbot, help, menu], format(message))
+    }
 
     async sendKikd() {
         const { kikd: kikdMessage } = config.messages
@@ -80,12 +89,13 @@ module.exports = class MenuController extends Controller {
     }
 
     async sendAboutChatbot() {
-        const { aboutChatbot: aboutMessage } = config.messages
-        return format(aboutMessage, { subject: this.subject })
+        const { aboutChatbot } = config.messages
+        return this.getIntroButton(format(aboutChatbot, { subject: this.subject }))
     }
 
     async sendHelp() {
-        return format(config.messages.help)
+        const { help } = config.messages
+        return this.getIntroButton(format(help))
     }
 
 }

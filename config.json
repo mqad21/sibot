@@ -4,10 +4,10 @@
         "seeContent": "LIHAT MATERI",
         "seeSubContent": "LIHAT SUBMATERI",
         "intro": "Halo!!\nPerkenalkan saya adalah *{botName}*\nApakah ada yang bisa *{botName}* bantu?",
-        "guide": "Petunjuk penggunaan *{botName}*\n1. Silahkan klik tombol atau MENU pada Chatbot untuk memilih pembelajaran yang diinginkan\n2. Silahkan klik tombol BANTUAN apabila ada yang ingin ditanyakan",
+        "guide": "Petunjuk penggunaan *{botName}*\n1. Silahkan klik tombol atau MENU yang tersedia pada *{botName}* untuk melakukan pilihan pembelajaran\n2. Silahkan klik tombol BANTUAN apabila ada yang ingin ditanyakan",
         "menu": "Anda memasuki MENU PEMBELAJARAN, silahkan pilih daftar pembelajaran yang tersedia dibawah ini:",
         "kikd": "Sobat *{botName}*, ini merupakan tampilan dari Kompetensi Inti dan Kompetensi Dasar dari materi {subject}\n\n*Kompetensi Inti*\n{ki}\n\n*Kompetensi Dasar*\n{kd}\n\n*Indikator*\n{indicator}\n\n*Tujuan Pembelajaran*\n{goals}",
-        "subject": "Sobat *{botName}*, ini merupakan tampilan dari materi pembelajaran {subject}",
+        "subject": "Anda memasuki MENU MATERI, silahkan pilih daftar materi yang tersedia dibawah ini:",
         "subsubject": "Sobat *{botName}*, ini merupakan tampilan dari submateri {title}",
         "quiz": "Berikut merupakan soal evaluasi setelah menggunakan Chatbot berbasis WhatsApp sebagai media pembelajaran pada materi {subject}\n\n{quiz}",
         "hi": "hai",
@@ -25,7 +25,8 @@
         "quiz": "SOAL EVALUASI",
         "about": "TENTANG",
         "aboutChatbot": "TENTANG SIBOT",
-        "help": "BANTUAN"
+        "help": "BANTUAN",
+        "backToIntro": "KEMBALI KE TAMPILAN AWAL"
     },
     "variables": {
         "botName": "SIBOT"

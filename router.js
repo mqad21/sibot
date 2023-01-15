@@ -5,6 +5,7 @@ const config = require('./config.json');
 const router = new Router();
 
 router.keyword(config.messages.hi, [IntroController, 'index']);
+router.keyword(config.menu.backToIntro, [IntroController, 'index']);
 router.button(config.menu.guide, [GuideController, 'index']);
 router.keyword(config.menu.aboutChatbot, [MenuController, 'sendAboutChatbot'])
 router.button(config.menu.menu, [MenuController, 'index']);
